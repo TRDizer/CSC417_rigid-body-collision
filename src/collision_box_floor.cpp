@@ -19,10 +19,6 @@ void collision_box_floor(std::vector<Eigen::Vector3d> &x, std::vector<Eigen::Vec
                          Eigen::Ref<Eigen::MatrixXd> V, 
                          Eigen::Ref<const Eigen::Vector3d> dir, Eigen::Ref<const Eigen::Vector3d> pos) {
 
-    x.clear();
-    n.clear();
-    objs.clear();
-
     for (int i = 0; i < V.rows(); i++) {
         Eigen::Vector3d world_x = R * V.row(i).transpose() + p;
         //    _____________
